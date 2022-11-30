@@ -3,7 +3,7 @@ import IntervalSplit from "./components/Spliter";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App Container">
       <IntervalSplit />
     </div>
   );

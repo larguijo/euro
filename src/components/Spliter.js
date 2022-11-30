@@ -1,9 +1,10 @@
+import "./Splitter.css";
 import React from "react";
 function Periods({ periods }) {
   return (
     <ul>
       {periods.map((period) => (
-        <li key={`${period.start}-${period.end}`}>
+        <li className="ranges" key={`${period.start}-${period.end}`}>
           {period.start} - {period.end}
         </li>
       ))}
@@ -15,7 +16,9 @@ function Errors({ errors }) {
   return (
     <ul>
       {errors.map((err) => (
-        <li key={err}>{err}</li>
+        <li className="errors" key={err}>
+          {err}
+        </li>
       ))}
     </ul>
   );
@@ -131,8 +134,8 @@ function IntervalSplit(props) {
 
   return (
     <div className="interval-split">
-      <form onSubmit={submit}>
-        <label>
+      <form className="form" onSubmit={submit}>
+        <label className="field">
           Start:{" "}
           <input
             id="start"
@@ -142,8 +145,8 @@ function IntervalSplit(props) {
             onChange={onChange}
           />
         </label>
-        <label>
-          End:{" "}
+        <label className="field">
+          End:{"   "}
           <input
             id="end"
             name="end"
@@ -152,7 +155,7 @@ function IntervalSplit(props) {
             onChange={onChange}
           />
         </label>
-        <button>Split</button>
+        <button className="button">Split</button>
       </form>
       {errors.length > 0 && <Errors errors={errors} />}
       <Periods periods={periods} />

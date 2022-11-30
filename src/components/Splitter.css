@@ -1,0 +1,44 @@
+.Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.interval-split {
+  max-width: 700px;
+  background-color: #f2f2f2;
+  padding: 3em;
+  margin-top: 15px;
+}
+
+.field {
+  display: block;
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+}
+
+.ranges {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0.5em;
+  background-color: #fbf9ba;
+  margin: 1px;
+  border: 1px solid #fbf9ba;
+}
+
+.errors {
+  list-style-type: none;
+  padding: 0.5em;
+  background-color: #fbd9cf;
+  margin: 1px;
+  border: 1px solid #ea632a;
+}
+
+.button {
+  background-color: transparent;
+  color: #6045e7;
+  border: 1px solid #6045e7;
+}
