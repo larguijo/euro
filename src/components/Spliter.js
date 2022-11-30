@@ -4,7 +4,11 @@ function Periods({ periods }) {
   return (
     <ul>
       {periods.map((period) => (
-        <li className="ranges" key={`${period.start}-${period.end}`}>
+        <li
+          className="ranges"
+          key={`${period.start}-${period.end}`}
+          style={{ width: `${(period.end - period.start) * 0.9}%` }}
+        >
           {period.start} - {period.end}
         </li>
       ))}
@@ -123,6 +127,7 @@ function IntervalSplit(props) {
     } else {
       const newPeriods = split(formValues);
       setPeriods(newPeriods);
+      setFormValues({ start: "", end: "" });
     }
   };
 
